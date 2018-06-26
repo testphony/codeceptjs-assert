@@ -10,7 +10,7 @@ class assertWrapper extends Helper {
    * https://nodejs.org/api/assert.html#assert_assert_value_message
    * @param {*} actual
    * @param {*} expected
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assert(actual, expected, message) {
@@ -21,7 +21,7 @@ class assertWrapper extends Helper {
    * https://nodejs.org/api/assert.html#assert_assert_deepequal_actual_expected_message
    * @param {*} actual
    * @param {*} expected
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assertDeepEqual(actual, expected, message) {
@@ -32,7 +32,7 @@ class assertWrapper extends Helper {
    * https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
    * @param {*} actual
    * @param {*} expected
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assertDeepStrictEqual(actual, expected, message) {
@@ -59,13 +59,13 @@ class assertWrapper extends Helper {
    * @returns {*}
    */
   assertFail(actual, expected, message, operator) {
-    return assert.assertFail(actual, expected, message, operator);
+    return assert.fail(actual, expected, message, operator);
   }
 
   /**
    * https://nodejs.org/api/assert.html#assert_assert_fail_message
    * @param {*} value
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assertOk(value, message) {
@@ -76,7 +76,7 @@ class assertWrapper extends Helper {
    * https://nodejs.org/api/assert.html#assert_assert_notequal_actual_expected_message
    * @param {*} actual
    * @param {*} expected
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assertNotEqual(actual, expected, message) {
@@ -87,7 +87,7 @@ class assertWrapper extends Helper {
    * https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message
    * @param {*} actual
    * @param {*} expected
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assertNotDeepStrictEqual(actual, expected, message) {
@@ -98,7 +98,7 @@ class assertWrapper extends Helper {
    * https://nodejs.org/api/assert.html#assert_assert_notdeepequal_actual_expected_message
    * @param {*} actual
    * @param {*} expected
-   * @param {string} message
+   * @param {string} [message]
    * @returns {*}
    */
   assertNotDeepEqual(actual, expected, message) {
@@ -110,7 +110,7 @@ class assertWrapper extends Helper {
    */
 
   /**
-   * Compare expecter and actual status code.
+   * Compare expected and actual status code.
    * @param {*} actual
    * @param {*} expected
    * @returns {*}
@@ -124,7 +124,7 @@ class assertWrapper extends Helper {
   }
 
   /**
-   * Expect That body is not empty
+   * Expect that body is not empty
    * @param {*} body
    * @param {string} message
    * @returns {*}
