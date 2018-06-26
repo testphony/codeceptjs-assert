@@ -15,6 +15,11 @@
     "type": "git",
     "url": "git@github.com:testphony/codeceptjs-assert.git"
   },
+  "keywords": [
+    "codeceptJS",
+    "codeceptjs",
+    "assert"
+  ],
   "author": "Andrey Pshenkin <andrey.pshenkin@gmail.com>",
   "license": "MIT"
 }
