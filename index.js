@@ -183,7 +183,7 @@ class assertWrapper extends Helper {
    * @param {string} message
    */
   assertEach(items, predicate, message) {
-    const failed = items.find(i => !predicate(i));
+    const failed = !items.every(i => predicate(i));
 
     if (failed) {
       assert.fail(`Item ${failed} don't satisfy predicate: ${predicate}: ${message}`);
