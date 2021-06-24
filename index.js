@@ -212,6 +212,17 @@ class assertWrapper extends Helper {
       assert.fail(`String ${actual} doesn't contain substring ${substring}`);
     }
   }
+
+  /**
+   * Check that string does not contain substring
+   * @param {string} actual
+   * @param {string} substring
+   */
+  assertStringNotIncludes(actual, substring) {
+    if (actual.indexOf(substring) > 0) {
+      assert.fail(`String ${actual} contains substring ${substring}`);
+    }
+  }
 }
 
 module.exports = assertWrapper;
