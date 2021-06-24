@@ -262,4 +262,16 @@ I.assertStringIncludes('mystring'. 'str');
 -   `actual` - tested string
 -   `substring` - expected substring
 
+## assertStringNotIncludes
+
+Check that string does not contain substring
+
+```js
+I.assertStringNotIncludes('mystring', 'sym');
+```
+
+**Parameters**
+
+-   `actual` - tested string
+-   `substring` - not expected substring
 
